@@ -3,8 +3,8 @@ import { PRODUCTS } from "./products.js";
 
     // 1. Store Configuration (Replace default number with your actual Anantapur store WhatsApp number)
     const STORE_CONFIG = {
-      name: "Lokesh ANANTAPUR",
-      whatsappNumber: localStorage.getItem("aura_store_whatsapp") || "916302449187"
+      name: "Meharaj ANANTAPUR",
+      whatsappNumber: localStorage.getItem("aura_store_whatsapp") || "919491132945"
     };
 
 
