@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURA ATELIER | Exclusive Women's Boutique — Anantapur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body class="bg-brand-cream text-brand-ink font-sans antialiased selection:bg-brand-rose selection:text-white">
+  <!-- Top Announcement Bar -->
+  <div class="bg-brand-ink text-brand-cream text-xs sm:text-sm py-2 px-4 text-center tracking-wide">
+    <span>✨ Grand Launch Offer: Flat 10–11% OFF + 10% Extra Student ID Discount on Weekdays in Anantapur!</span>
+  </div>
+
+  <!-- Sticky Header & Navigation -->
+  <header class="sticky top-0 z-40 bg-brand-cream/95 backdrop-blur-md border-b border-stone-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-brand-rose text-white flex items-center justify-center font-serif text-xl sm:text-2xl font-bold shadow-sm group-hover:bg-brand-rose-dark transition">
+          A
+        </div>
+        <div>
+          <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-brand-ink block leading-none">AURA ATELIER</span>
+          <span class="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-brand-muted block mt-0.5">Anantapur Boutique</span>
+        </div>
+      </a>
+
+      <!-- Desktop Quick Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-brand-muted">
+        <a href="#collection" onclick="filterCategory('All')" class="hover:text-brand-rose transition">All Styles</a>
+        <a href="#collection" onclick="filterCategory('Trendy Western')" class="hover:text-brand-rose transition">Western Wear</a>
+        <a href="#collection" onclick="filterCategory('Ethnic & Festive')" class="hover:text-brand-rose transition">Ethnic & Festive</a>
+        <a href="#collection" onclick="filterCategory('Occasion & Party')" class="hover:text-brand-rose transition">Occasion Wear</a>
+        <a href="#visit-store" class="hover:text-brand-rose transition">Visit Store</a>
+      </nav>
+
+      <!-- Right Actions: Store Config & Cart Trigger -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Quick Store WhatsApp Number Setup Trigger (for Store Owner convenience) -->
+        <button
+          onclick="toggleSettingsModal(true)"
+          title="Configure Store WhatsApp Number"
+          class="p-2.5 rounded-xl border border-stone-200 bg-white text-brand-muted hover:text-brand-ink hover:border-stone-300 transition text-xs flex items-center gap-1.5"
+        >
+          <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          <span class="hidden sm:inline font-medium">Store Setup</span>
+        </button>
+
+        <!-- Shopping Bag Button -->
+        <button
+          onclick="toggleCart(true)"
+          aria-label="Open shopping bag"
+          class="relative flex items-center gap-2 bg-brand-ink hover:bg-brand-rose text-white px-3.5 sm:px-4 py-2.5 rounded-xl font-medium text-sm transition shadow-sm"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+          <span class="hidden sm:inline">Bag</span>
+          <span id="cart-badge" class="bg-brand-gold text-brand-ink text-xs font-bold px-2 py-0.5 rounded-full">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-brand-sand border-b border-stone-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <!-- Hero Text -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 bg-white/90 border border-stone-200 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide text-brand-rose shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-brand-rose animate-pulse"></span>
+            CURATED EXCLUSIVELY FOR ANANTAPUR
+          </div>
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-ink leading-[1.1]">
+            Boutique Styles That Turn Every Street Into a Runway.
+          </h1>
+          <p class="text-brand-muted text-base sm:text-lg max-w-2xl leading-relaxed">
+            Discover handpicked Korean-fit western wear, breathable festive kurtis, and statement occasion gowns. Limited single-set pieces per design—so your outfit stays uniquely yours.
+          </p>
+          <div class="flex flex-wrap items-center gap-3 pt-1">
+            <a href="#collection" class="bg-brand-rose hover:bg-brand-rose-dark text-white px-6 py-3.5 rounded-xl font-semibold text-sm sm:text-base shadow-md shadow-brand-rose/20 transition">
+              Explore New Arrivals
+            </a>
+            <a href="#visit-store" class="bg-white hover:bg-stone-50 text-brand-ink border border-stone-300 px-6 py-3.5 rounded-xl font-semibold text-sm sm:text-base transition">
+              Free 24-Hr Fitting & Store Info
+            </a>
+          </div>
+          <!-- Trust Badges -->
+          <div class="grid grid-cols-3 gap-3 sm:gap-6 pt-4 border-t border-stone-300/60 max-w-xl">
+            <div>
+              <p class="font-bold text-brand-ink text-sm sm:text-base">₹799 – ₹2,699</p>
+              <p class="text-xs text-brand-muted">Honest Boutique Pricing</p>
+            </div>
+            <div>
+              <p class="font-bold text-brand-ink text-sm sm:text-base">S, M, L, XL</p>
+              <p class="text-xs text-brand-muted">Limited 1 Set / Design</p>
+            </div>
+            <div>
+              <p class="font-bold text-brand-ink text-sm sm:text-base">WhatsApp Order</p>
+              <p class="text-xs text-brand-muted">Same-Day Local Delivery</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Collage Card -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-3xl overflow-hidden bg-white p-3 shadow-xl border border-stone-200/80">
+            <div class="aspect-[4/4] sm:aspect-[4/3] lg:aspect-[4/4] rounded-2xl overflow-hidden relative bg-stone-200">
+              <img
+                src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=900&q=80"
+                onerror="this.src='https://placehold.co/800x800/F2ECE4/9F3A55?text=Aura+Atelier+Collection'"
+                alt="Curated Ethnic and Western Women's Fashion"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4 text-white flex items-end justify-between gap-3">
+                <div>
+                  <span class="text-[11px] uppercase tracking-widest bg-brand-gold text-brand-ink font-bold px-2.5 py-0.5 rounded-md">Festive Edit '26</span>
+                  <p class="font-serif text-2xl font-bold mt-1">Anarkali & Co-ord Sets</p>
+                  <p class="text-xs text-stone-200">Starting at ₹1,249 • Kovur Nagar, Anantapur</p>
+                </div>
+                <button onclick="filterCategory('Ethnic & Festive'); document.getElementById('collection').scrollIntoView();" class="bg-white text-brand-ink hover:bg-brand-cream px-3.5 py-2 rounded-xl text-xs font-bold shrink-0 shadow">
+                  Shop Edit →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Storefront Catalog Section -->
+  <main id="collection" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+    <!-- Section Header + Search -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-[0.18em] text-brand-rose">Curated Lookbook</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-ink mt-1">Shop Exclusive Designs</h2>
+      </div>
+
+      <!-- Search & Sort Controls -->
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+        <div class="relative">
+          <input
+            id="search-input"
+            type="text"
+            oninput="renderProducts()"
+            placeholder="Search kurtis, tops, gowns..."
+            class="w-full sm:w-64 pl-9 pr-4 py-2.5 rounded-xl bg-white border border-stone-200 text-sm focus:outline-none focus:border-brand-rose transition"
+          />
+          <svg class="w-4 h-4 text-brand-muted absolute left-3 top-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" />
+          </svg>
+        </div>
+
+        <select
+          id="sort-select"
+          onchange="renderProducts()"
+          class="px-3.5 py-2.5 rounded-xl bg-white border border-stone-200 text-sm font-medium text-brand-ink focus:outline-none focus:border-brand-rose"
+        >
+          <option value="featured">Sort: Featured</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Category Filter Pills -->
+    <div class="flex items-center gap-2.5 overflow-x-auto no-scrollbar pb-4 mb-6" id="category-tabs">
+      <button onclick="filterCategory('All')" data-cat="All" class="cat-btn active px-5 py-2.5 rounded-xl text-sm font-semibold whitespace-nowrap transition bg-brand-ink text-white shadow-sm">
+        All Collection (12)
+      </button>
+      <button onclick="filterCategory('Trendy Western')" data-cat="Trendy Western" class="cat-btn px-5 py-2.5 rounded-xl text-sm font-semibold whitespace-nowrap transition bg-white text-brand-ink border border-stone-200 hover:border-brand-rose">
+        Trendy Western Wear
+      </button>
+      <button onclick="filterCategory('Ethnic & Festive')" data-cat="Ethnic & Festive" class="cat-btn px-5 py-2.5 rounded-xl text-sm font-semibold whitespace-nowrap transition bg-white text-brand-ink border border-stone-200 hover:border-brand-rose">
+        Ethnic & Festive Wear
+      </button>
+      <button onclick="filterCategory('Occasion & Party')" data-cat="Occasion & Party" class="cat-btn px-5 py-2.5 rounded-xl text-sm font-semibold whitespace-nowrap transition bg-white text-brand-ink border border-stone-200 hover:border-brand-rose">
+        Occasion & Party Wear
+      </button>
+    </div>
+
+    <!-- Product Grid -->
+    <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <!-- Cards injected dynamically via JavaScript -->
+    </div>
+
+    <!-- Empty State -->
+    <div id="empty-state" class="hidden text-center py-16 bg-white rounded-3xl border border-stone-200">
+      <p class="font-serif text-2xl font-bold text-brand-ink">No matching outfits found</p>
+      <p class="text-sm text-brand-muted mt-1">Try clearing your search or switching categories.</p>
+      <button onclick="resetFilters()" class="mt-4 bg-brand-rose text-white px-5 py-2.5 rounded-xl text-sm font-semibold">
+        View All Outfits
+      </button>
+    </div>
+  </main>
+
+  <!-- Boutique Experience & Store Location Banner -->
+  <section id="visit-store" class="bg-brand-sand border-t border-stone-200/80 py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-sm border border-stone-200/80 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+        <div class="lg:col-span-2 space-y-4">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-rose">Visit Our Anantapur Boutique</span>
+          <h3 class="font-serif text-3xl sm:text-4xl font-bold text-brand-ink">Try Before You Buy or Book via WhatsApp</h3>
+          <p class="text-brand-muted text-sm sm:text-base leading-relaxed">
+            Located near Kovur Nagar / Ram Nagar Main Road, Anantapur. Enjoy air-conditioned trial rooms, a warm-lit selfie mirror corner, and <strong class="text-brand-ink">complimentary 24-hour tailoring adjustments</strong> on every ethnic and occasion outfit.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-sm">
+            <div class="bg-brand-cream p-4 rounded-2xl border border-stone-200/70">
+              <p class="font-bold text-brand-ink">📍 Boutique Address</p>
+              <p class="text-brand-muted mt-1">1st Floor, Boutique Plaza, Kovur Nagar, Anantapur, Andhra Pradesh 515004</p>
+            </div>
+            <div class="bg-brand-cream p-4 rounded-2xl border border-stone-200/70">
+              <p class="font-bold text-brand-ink">🕒 Store Hours & Perks</p>
+              <p class="text-brand-muted mt-1">Open Daily: 10:30 AM – 9:00 PM<br/>10% Student ID Discount (Mon–Fri)</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-brand-ink text-brand-cream p-6 sm:p-7 rounded-2xl space-y-4">
+          <p class="font-serif text-2xl font-bold">Join Our WhatsApp VIP Club</p>
+          <p class="text-xs sm:text-sm text-stone-300 leading-relaxed">
+            Get photos of fresh Bengaluru & Surat arrivals 24 hours before they hit the store racks. Limited 1 piece per size!
+          </p>
+          <button onclick="openDirectWhatsAppInquiry()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition shadow-lg">
+            <span>💬 Chat on WhatsApp Now</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brand-ink text-stone-400 text-xs py-8 px-4 border-t border-stone-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="font-serif text-base text-white font-semibold">AURA ATELIER — Exclusive Women's Wear, Anantapur</p>
+      <p>© 2026 Aura Atelier Anantapur. Cash on Delivery (Anantapur City), UPI & In-Store Pickup Available.</p>
+    </div>
+  </footer>
+
+  <!-- Slide-Out Shopping Bag Drawer -->
+  <div id="cart-overlay" onclick="toggleCart(false)" class="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 hidden transition-opacity"></div>
+  <aside id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-brand-cream z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+    <!-- Drawer Header -->
+    <div class="p-5 bg-white border-b border-stone-200 flex items-center justify-between">
+      <div>
+        <h3 class="font-serif text-2xl font-bold text-brand-ink">Your Shopping Bag</h3>
+        <p class="text-xs text-brand-muted">Direct WhatsApp Checkout • No Advance Online Payment Needed</p>
+      </div>
+      <button onclick="toggleCart(false)" class="p-2 rounded-xl hover:bg-stone-100 text-brand-ink" aria-label="Close bag">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Drawer Items List -->
+    <div id="cart-items-container" class="flex-1 overflow-y-auto p-5 space-y-4">
+      <!-- Cart items injected here -->
+    </div>
+
+    <!-- Drawer Checkout Footer -->
+    <div id="cart-footer" class="p-5 bg-white border-t border-stone-200 space-y-4 hidden">
+      <!-- Customer Delivery Details for WhatsApp Message -->
+      <div class="space-y-2.5">
+        <input
+          id="cust-name"
+          type="text"
+          placeholder="Your Name (e.g., Priya Reddy)"
+          class="w-full px-3.5 py-2.5 rounded-xl bg-brand-cream border border-stone-200 text-sm focus:outline-none focus:border-brand-rose"
+        />
+        <div class="grid grid-cols-2 gap-2">
+          <select id="delivery-mode" class="px-3 py-2.5 rounded-xl bg-brand-cream border border-stone-200 text-xs font-medium text-brand-ink focus:outline-none focus:border-brand-rose">
+            <option value="Home Delivery (Anantapur)">🚚 Anantapur Home Delivery</option>
+            <option value="Store Pickup & Trial">🏬 Store Pickup & Trial</option>
+          </select>
+          <input
+            id="cust-area"
+            type="text"
+            placeholder="Area (e.g., Kovur Nagar)"
+            class="px-3 py-2.5 rounded-xl bg-brand-cream border border-stone-200 text-xs focus:outline-none focus:border-brand-rose"
+          />
+        </div>
+      </div>
+
+      <!-- Totals -->
+      <div class="space-y-1 text-sm pt-1 border-t border-stone-100">
+        <div class="flex justify-between text-brand-muted">
+          <span>Total Savings (Launch Offer)</span>
+          <span id="cart-savings" class="text-emerald-700 font-semibold">₹0</span>
+        </div>
+        <div class="flex justify-between text-base font-bold text-brand-ink pt-1">
+          <span>Total Payable</span>
+          <span id="cart-total">₹0</span>
+        </div>
+      </div>
+
+      <!-- WhatsApp Order Button -->
+      <button
+        onclick="checkoutViaWhatsApp()"
+        class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-4 rounded-xl text-sm sm:text-base shadow-lg shadow-emerald-600/20 flex items-center justify-center gap-2 transition"
+      >
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+          <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+        </svg>
+        <span>Send Order on WhatsApp</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Store WhatsApp Number Setup Modal (So the owner can immediately test/customize their number) -->
+  <div id="settings-modal" class="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-stone-200 space-y-4">
+      <div class="flex items-center justify-between">
+        <h3 class="font-serif text-2xl font-bold text-brand-ink">Store Owner Settings</h3>
+        <button onclick="toggleSettingsModal(false)" class="p-1.5 rounded-lg hover:bg-stone-100 text-brand-muted">✕</button>
+      </div>
+      <p class="text-xs text-brand-muted leading-relaxed">
+        Enter your boutique's WhatsApp business number (with country code <code class="bg-stone-100 px-1 rounded">91</code>, no <code class="bg-stone-100 px-1 rounded">+</code> sign). All customer orders will open directly in your WhatsApp chat!
+      </p>
+      <div>
+        <label class="block text-xs font-bold text-brand-ink mb-1">Boutique WhatsApp Number</label>
+        <input
+          id="store-whatsapp-input"
+          type="tel"
+          placeholder="919876543210"
+          class="w-full px-4 py-2.5 rounded-xl border border-stone-300 text-sm font-medium focus:outline-none focus:border-brand-rose"
+        />
+      </div>
+      <div class="flex justify-end gap-2 pt-2">
+        <button onclick="toggleSettingsModal(false)" class="px-4 py-2 rounded-xl text-xs font-semibold text-brand-muted hover:bg-stone-100">Cancel</button>
+        <button onclick="saveStoreSettings()" class="px-5 py-2.5 rounded-xl text-xs font-bold bg-brand-rose text-white hover:bg-brand-rose-dark">Save Number</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Non-blocking Toast Notification -->
+  <div id="toast" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 bg-brand-ink text-white px-5 py-3 rounded-2xl shadow-xl text-xs sm:text-sm font-medium flex items-center gap-2 opacity-0 pointer-events-none transition-opacity duration-300">
+    <span id="toast-msg">Added to bag!</span>
+  </div>
+</body>
+</html>

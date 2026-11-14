@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  --color-brand-cream: #faf8f5;
+  --color-brand-sand: #f2ece4;
+  --color-brand-rose: #9f3a55;
+  --color-brand-rose-dark: #7d2940;
+  --color-brand-gold: #c49a45;
+  --color-brand-ink: #1f1b1d;
+  --color-brand-muted: #6b6266;
+}
+
+/* Custom scrollbar & subtle animations */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #faf8f5;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6c9be;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9f3a55;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-card {
+  animation: fadeSlideUp 0.35s ease-out forwards;
+}

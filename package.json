@@ -1,0 +1,17 @@
+{
+  "name": "aura-atelier-boutique",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "AURA ATELIER — exclusive women's boutique storefront for Anantapur",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "tailwindcss": "^4.3.5",
+    "vite": "^8.3.8"
+  }
+}
