@@ -1,9 +1,9 @@
 {
-  "name": "aura-atelier-boutique",
+  "name": "l2m-womens-shoppy",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "AURA ATELIER — exclusive women's boutique storefront for Anantapur",
+  "description": "L2M Womens shoppy — exclusive women's boutique storefront for Anantapur",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

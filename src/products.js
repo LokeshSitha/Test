@@ -44,6 +44,28 @@ export const PRODUCTS = [
         image: "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?auto=format&fit=crop&w=700&q=80"
       },
       {
+        id: "WST-105",
+        name: "Ivory Oversized Blazer & Wide-Leg Set",
+        category: "Trendy Western",
+        mrp: 1799,
+        price: 1599,
+        badge: "New Arrival",
+        fabric: "Structured Crepe Blend",
+        sizes: ["S", "M", "L", "XL"],
+        image: "https://images.unsplash.com/photo-1768507824651-eb62b16ed112?auto=format&fit=crop&w=700&q=80"
+      },
+      {
+        id: "WST-106",
+        name: "Charcoal Tailored Blazer Co-ord",
+        category: "Trendy Western",
+        mrp: 1899,
+        price: 1699,
+        badge: "Office Edit",
+        fabric: "Poly-Viscose Suiting",
+        sizes: ["S", "M", "L", "XL"],
+        image: "https://images.unsplash.com/photo-1575926686901-3702c3ec37d3?auto=format&fit=crop&w=700&q=80"
+      },
+      {
         id: "ETH-201",
         name: "Jaipuri Block-Print 3-Pc Kurti Set",
         category: "Ethnic & Festive",
@@ -63,7 +85,7 @@ export const PRODUCTS = [
         badge: "Festive Pick",
         fabric: "Chanderi Silk Blend",
         sizes: ["M", "L", "XL"],
-        image: "https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=700&q=80"
+        image: "https://images.unsplash.com/photo-1787831536851-7b8e9ef4a18c?auto=format&fit=crop&w=700&q=80"
       },
       {
         id: "ETH-203",
@@ -130,5 +152,27 @@ export const PRODUCTS = [
         fabric: "Lycra Shimmer Pre-Draped",
         sizes: ["S", "M", "L", "XL"],
         image: "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=700&q=80"
+      },
+      {
+        id: "OCC-305",
+        name: "Scarlet Sequin Evening Gown",
+        category: "Occasion & Party",
+        mrp: 2899,
+        price: 2599,
+        badge: "Glam Night",
+        fabric: "Sequin Mesh & Satin Lining",
+        sizes: ["S", "M", "L", "XL"],
+        image: "https://images.unsplash.com/photo-1765229280941-696a549bb3dc?auto=format&fit=crop&w=700&q=80"
+      },
+      {
+        id: "OCC-306",
+        name: "Emerald Hand-Beaded Evening Gown",
+        category: "Occasion & Party",
+        mrp: 2999,
+        price: 2699,
+        badge: "Limited Set",
+        fabric: "Hand-Beaded Chiffon",
+        sizes: ["S", "M", "L"],
+        image: "https://images.unsplash.com/photo-1786529745857-b14e9f06cadf?auto=format&fit=crop&w=700&q=80"
       }
     ];
